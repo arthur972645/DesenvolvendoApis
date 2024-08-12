@@ -1,13 +1,17 @@
+//Função responsavel para criar ostoken dos usuarios
+
 import jwt from "jsonwebtoken";
 
-//assincrono
+//função assincrona para a criação do token
 const createUserToken = async (usuario, request, response) => {
-  //criar token
+  //criar token do usuario, onde no token vai ter o nome e o id do usuario
+  //o jwt.sing cria o token
   const token = jwt.sign(
     {
       nome: usuario.nome,
       id: usuario.usuario_id,
     },
+    //Chave que vai autentificar o token
     "SENHASUPERSEGURAEDIFICIL" //senha
   );
   //Retornar o token

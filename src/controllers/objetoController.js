@@ -88,7 +88,7 @@ export const create = async (request, response) => {
 export const getAllObjectUser = async (request, response) => {
   try {
     const token = getToken(request); //extrei o token
-    const user = await getUserByToken(token); //pega o id do objeto pelo token
+    const user = await getUserByToken(token); //extraindo informações pelo token
 
     const usuarioId = user.usuario_id;
     //selecionando todos os campos da tabela que seram mostrados
