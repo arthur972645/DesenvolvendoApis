@@ -1,0 +1,2 @@
+table clientes (id, nome, email, senha, imagem)
+criar, listar, atualizar, listar um
